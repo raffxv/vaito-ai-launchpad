@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-astronaut.jpg";
+import vaitoLogo from "@/assets/vaito-logo.jpg";
 
 const Hero = () => {
   return (
@@ -17,8 +18,8 @@ const Hero = () => {
         <div className="space-y-6">
           {/* Tech border decoration */}
           <div className="neon-border inline-block p-1 rounded-lg mb-4">
-            <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-              <span className="font-orbitron font-bold text-2xl text-primary-foreground">V</span>
+            <div className="w-12 h-12 rounded-lg overflow-hidden">
+              <img src={vaitoLogo} alt="VAITO.AI Logo" className="w-full h-full object-cover" />
             </div>
           </div>
 
