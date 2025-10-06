@@ -1,11 +1,12 @@
 const Tokenomics = () => {
   const tokenData = [
-    { label: "Total Supply", value: "1,000,000,000", subtext: "VAITO" },
-    { label: "Liquidity Pool", value: "40%", subtext: "400M tokens" },
-    { label: "Community Rewards", value: "25%", subtext: "250M tokens" },
-    { label: "Development", value: "15%", subtext: "150M tokens" },
-    { label: "Marketing", value: "10%", subtext: "100M tokens" },
-    { label: "Team & Advisors", value: "10%", subtext: "100M tokens (vested)" },
+    { label: "Total Supply", value: "6,823,901,732", subtext: "VAITO" },
+    { label: "Presale", value: "10%", subtext: "682M tokens" },
+    { label: "Liquidity Pool", value: "35%", subtext: "2.39B tokens" },
+    { label: "Community Rewards", value: "20%", subtext: "1.36B tokens" },
+    { label: "Development", value: "15%", subtext: "1.02B tokens" },
+    { label: "Marketing", value: "10%", subtext: "682M tokens" },
+    { label: "Team & Advisors", value: "10%", subtext: "682M tokens (vested)" },
   ];
 
   return (
