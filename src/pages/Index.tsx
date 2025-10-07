@@ -6,6 +6,7 @@ import Tokenomics from "@/components/Tokenomics";
 import Roadmap from "@/components/Roadmap";
 import Footer from "@/components/Footer";
 import LoadingScreen from "@/components/LoadingScreen";
+import PurchaseNotifications from "@/components/PurchaseNotifications";
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,6 +41,7 @@ const Index = () => {
 
   return (
     <div className={`min-h-screen ${showContent ? 'animate-fade-in' : 'opacity-0'}`}>
+      <PurchaseNotifications />
       <Header onPresaleClick={handlePresaleClick} />
       <Hero />
       <About />
