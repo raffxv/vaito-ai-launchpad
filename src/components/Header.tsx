@@ -8,6 +8,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import LanguageSelector from "@/components/LanguageSelector";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface HeaderProps {
   onPresaleClick: () => void;
@@ -15,6 +17,7 @@ interface HeaderProps {
 
 const Header = ({ onPresaleClick }: HeaderProps) => {
   const [open, setOpen] = useState(false);
+  const { t } = useLanguage();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -30,7 +33,8 @@ const Header = ({ onPresaleClick }: HeaderProps) => {
   };
 
   return (
-    <header className="fixed top-4 right-4 z-50">
+    <header className="fixed top-4 right-4 z-50 flex gap-2">
+      <LanguageSelector />
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <Button
@@ -50,14 +54,14 @@ const Header = ({ onPresaleClick }: HeaderProps) => {
               className="justify-start text-lg hover:bg-primary/10 hover:text-primary"
               onClick={() => scrollToSection("tokenomics")}
             >
-              Tokenomics
+              {t("nav.tokenomics")}
             </Button>
             <Button
               variant="ghost"
               className="justify-start text-lg hover:bg-primary/10 hover:text-primary"
               onClick={() => scrollToSection("roadmap")}
             >
-              Roadmap
+              {t("nav.roadmap")}
             </Button>
             <Button
               variant="ghost"

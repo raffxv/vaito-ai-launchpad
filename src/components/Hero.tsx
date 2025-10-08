@@ -6,12 +6,14 @@ import { Copy, Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import heroImage from "@/assets/hero-vaito.jpg";
 import vaitoLogo from "@/assets/vaito-logo.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Hero = () => {
   const [showPresale, setShowPresale] = useState(false);
   const [copied, setCopied] = useState(false);
   const [solAmount, setSolAmount] = useState("");
   const { toast } = useToast();
+  const { t } = useLanguage();
   const presaleAddress = "96Qj354e1ZnXe37gvx5zvK5Rb7MRtKcyJvNqfXUwyjt3";
   const exchangeRate = 12682023; // 1 SOL = 12,682,023 VAITO
 
@@ -58,13 +60,13 @@ export const Hero = () => {
           </h1>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-            JOIN OUR
+            {t("hero.subtitle")}
             <br />
-            <span className="text-foreground">COMMUNITY</span>
+            <span className="text-foreground">{t("hero.community")}</span>
           </h2>
 
           <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-lg leading-relaxed">
-            Be part of the crypto movement, stay informed and connected with everything.
+            {t("hero.description")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
@@ -74,14 +76,14 @@ export const Hero = () => {
               data-presale-trigger
               className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-6 md:px-8 py-5 md:py-6 text-base md:text-lg neon-border transition-all hover:shadow-[0_0_30px_hsl(var(--neon-glow)/0.7)] w-full sm:w-auto"
             >
-              BUY NOW
+              {t("hero.buyNow")}
             </Button>
             <Button 
               variant="outline" 
               size="lg"
               className="border-primary text-primary hover:bg-primary/10 font-semibold px-6 md:px-8 py-5 md:py-6 text-base md:text-lg backdrop-blur-sm w-full sm:w-auto"
             >
-              LEARN MORE
+              {t("hero.learnMore")}
             </Button>
           </div>
 
@@ -116,16 +118,16 @@ export const Hero = () => {
       <Dialog open={showPresale} onOpenChange={setShowPresale}>
         <DialogContent className="sm:max-w-md bg-background/95 backdrop-blur-xl border-primary/30">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-orbitron text-glow">VAITO.AI Presale</DialogTitle>
+            <DialogTitle className="text-2xl font-orbitron text-glow">{t("presale.title")}</DialogTitle>
             <DialogDescription className="text-muted-foreground">
-              Send SOL to participate in the presale
+              {t("presale.description")}
             </DialogDescription>
           </DialogHeader>
           
           <div className="space-y-6 py-4">
             {/* Presale Address */}
             <div className="space-y-2">
-              <label className="text-sm font-semibold text-foreground">Presale Address</label>
+              <label className="text-sm font-semibold text-foreground">{t("presale.address")}</label>
               <div className="flex gap-2">
                 <input
                   type="text"
@@ -146,10 +148,10 @@ export const Hero = () => {
 
             {/* Calculator */}
             <div className="space-y-3 p-4 rounded-lg bg-primary/10 border border-primary/30">
-              <label className="text-sm font-semibold text-foreground">Presale Calculator</label>
+              <label className="text-sm font-semibold text-foreground">{t("presale.calculator")}</label>
               <div className="space-y-3">
                 <div>
-                  <label className="text-xs text-muted-foreground mb-1 block">Enter SOL Amount</label>
+                  <label className="text-xs text-muted-foreground mb-1 block">{t("presale.enterAmount")}</label>
                   <input
                     type="number"
                     placeholder="0.00"
@@ -164,7 +166,7 @@ export const Hero = () => {
                   <span className="text-xl">↓</span>
                 </div>
                 <div>
-                  <label className="text-xs text-muted-foreground mb-1 block">You Will Receive</label>
+                  <label className="text-xs text-muted-foreground mb-1 block">{t("presale.willReceive")}</label>
                   <div className="w-full px-3 py-2 bg-background/80 border border-primary/50 rounded-md text-foreground font-bold text-lg">
                     {calculateVaito()} VAITO
                   </div>
@@ -176,13 +178,13 @@ export const Hero = () => {
             <div className="grid grid-cols-2 gap-3">
               <div className="p-3 rounded-lg bg-background/50 border border-primary/20">
                 <div className="text-center">
-                  <p className="text-xs text-muted-foreground mb-1">Exchange Rate</p>
+                  <p className="text-xs text-muted-foreground mb-1">{t("presale.exchangeRate")}</p>
                   <p className="text-sm font-semibold text-foreground">1 SOL = 12,682,023 VAITO</p>
                 </div>
               </div>
               <div className="p-3 rounded-lg bg-background/50 border border-primary/20">
                 <div className="text-center">
-                  <p className="text-xs text-muted-foreground mb-1">Min Buy</p>
+                  <p className="text-xs text-muted-foreground mb-1">{t("presale.minBuy")}</p>
                   <p className="text-sm font-semibold text-foreground">0.2 SOL</p>
                 </div>
               </div>
@@ -191,20 +193,20 @@ export const Hero = () => {
             {/* Progress */}
             <div className="space-y-3">
               <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">Raised</span>
+                <span className="text-muted-foreground">{t("presale.raised")}</span>
                 <span className="font-semibold text-foreground">52 SOL / 120 SOL</span>
               </div>
               <Progress value={43} className="h-3" />
               <div className="flex justify-between text-xs text-muted-foreground">
-                <span>43% Complete</span>
-                <span>68 SOL Remaining</span>
+                <span>43% {t("presale.complete")}</span>
+                <span>68 SOL {t("presale.remaining")}</span>
               </div>
             </div>
 
             {/* Warning */}
             <div className="p-3 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
               <p className="text-xs text-yellow-200">
-                ⚠️ Always verify the contract address before sending funds. Do not send from exchanges.
+                {t("presale.warning")}
               </p>
             </div>
           </div>
