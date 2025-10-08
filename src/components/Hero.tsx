@@ -172,11 +172,19 @@ export const Hero = () => {
               </div>
             </div>
 
-            {/* Exchange Rate */}
-            <div className="p-3 rounded-lg bg-background/50 border border-primary/20">
-              <div className="text-center">
-                <p className="text-xs text-muted-foreground mb-1">Exchange Rate</p>
-                <p className="text-sm font-semibold text-foreground">1 SOL = 12,682,023 VAITO</p>
+            {/* Exchange Rate & Min Buy */}
+            <div className="grid grid-cols-2 gap-3">
+              <div className="p-3 rounded-lg bg-background/50 border border-primary/20">
+                <div className="text-center">
+                  <p className="text-xs text-muted-foreground mb-1">Exchange Rate</p>
+                  <p className="text-sm font-semibold text-foreground">1 SOL = 12,682,023 VAITO</p>
+                </div>
+              </div>
+              <div className="p-3 rounded-lg bg-background/50 border border-primary/20">
+                <div className="text-center">
+                  <p className="text-xs text-muted-foreground mb-1">Min Buy</p>
+                  <p className="text-sm font-semibold text-foreground">0.2 SOL</p>
+                </div>
               </div>
             </div>
 
