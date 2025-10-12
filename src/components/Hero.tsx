@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Progress } from "@/components/ui/progress";
+
 import { Copy, Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import heroImage from "@/assets/hero-vaito.jpg";
@@ -187,19 +187,6 @@ export const Hero = () => {
                   <p className="text-xs text-muted-foreground mb-1">{t("presale.minBuy")}</p>
                   <p className="text-sm font-semibold text-foreground">0.2 SOL</p>
                 </div>
-              </div>
-            </div>
-
-            {/* Progress */}
-            <div className="space-y-3">
-              <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">{t("presale.raised")}</span>
-                <span className="font-semibold text-foreground">52 SOL / 120 SOL</span>
-              </div>
-              <Progress value={43} className="h-3" />
-              <div className="flex justify-between text-xs text-muted-foreground">
-                <span>43% {t("presale.complete")}</span>
-                <span>68 SOL {t("presale.remaining")}</span>
               </div>
             </div>
 
