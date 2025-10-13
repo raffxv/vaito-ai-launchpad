@@ -154,13 +154,6 @@ export const Hero = () => {
             >
               {t("hero.buyNow")}
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-primary text-primary hover:bg-primary/10 font-semibold px-6 md:px-8 py-5 md:py-6 text-base md:text-lg backdrop-blur-sm w-full sm:w-auto"
-            >
-              {t("hero.learnMore")}
-            </Button>
           </div>
 
           {/* Tech decorative lines */}
