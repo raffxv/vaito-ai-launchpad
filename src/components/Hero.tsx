@@ -27,8 +27,8 @@ export const Hero = () => {
 
   useEffect(() => {
     const endDate = new Date();
-    endDate.setDate(endDate.getDate() + 7);
-    endDate.setHours(endDate.getHours() + 9);
+    endDate.setDate(endDate.getDate() + 6);
+    endDate.setHours(endDate.getHours() + 11);
     
     const timer = setInterval(() => {
       const now = new Date().getTime();
