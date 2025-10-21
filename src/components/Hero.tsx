@@ -338,6 +338,13 @@ export const Hero = () => {
           </DialogHeader>
           
           <div className="space-y-4 py-4">
+            {/* End Date Notice */}
+            <div className="p-3 rounded-lg bg-primary/10 border border-primary/30">
+              <p className="text-xs sm:text-sm text-center text-foreground font-medium">
+                ⏰ {t("airdrop.endsOn")}
+              </p>
+            </div>
+
             <div className="space-y-2">
               <label className="text-sm font-semibold text-foreground">
                 {t("airdrop.addressLabel")}

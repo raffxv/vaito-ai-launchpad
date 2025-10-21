@@ -52,6 +52,7 @@ const translations = {
     "airdrop.success": "Successfully registered for airdrop!",
     "airdrop.successDesc": "You will receive your VAITO tokens when the airdrop is distributed.",
     "airdrop.invalidAddress": "Please enter a valid Solana address",
+    "airdrop.endsOn": "Registration ends on October 23, 2024",
     
     // Special Price
     "specialPrice.title": "Special Price",
@@ -158,6 +159,7 @@ const translations = {
     "airdrop.success": "Berhasil terdaftar untuk airdrop!",
     "airdrop.successDesc": "Anda akan menerima token VAITO ketika airdrop didistribusikan.",
     "airdrop.invalidAddress": "Silakan masukkan alamat Solana yang valid",
+    "airdrop.endsOn": "Pendaftaran berakhir pada 23 Oktober 2024",
     
     // Special Price
     "specialPrice.title": "Harga Spesial",
@@ -264,6 +266,7 @@ const translations = {
     "airdrop.success": "成功注册空投！",
     "airdrop.successDesc": "空投分发时您将收到VAITO代币。",
     "airdrop.invalidAddress": "请输入有效的Solana地址",
+    "airdrop.endsOn": "注册截止日期：2024年10月23日",
     
     // Special Price
     "specialPrice.title": "特价优惠",
@@ -370,6 +373,7 @@ const translations = {
     "airdrop.success": "에어드랍 등록 완료!",
     "airdrop.successDesc": "에어드랍 배포 시 VAITO 토큰을 받게 됩니다.",
     "airdrop.invalidAddress": "유효한 솔라나 주소를 입력하세요",
+    "airdrop.endsOn": "등록 마감: 2024년 10월 23일",
     
     // Special Price
     "specialPrice.title": "특별 가격",
@@ -476,6 +480,7 @@ const translations = {
     "airdrop.success": "Успешная регистрация на раздачу!",
     "airdrop.successDesc": "Вы получите токены VAITO при распределении раздачи.",
     "airdrop.invalidAddress": "Пожалуйста, введите действительный адрес Solana",
+    "airdrop.endsOn": "Регистрация до 23 октября 2024 г.",
     
     // Special Price
     "specialPrice.title": "Специальная цена",
@@ -582,6 +587,7 @@ const translations = {
     "airdrop.success": "تم التسجيل بنجاح في الإسقاط الجوي!",
     "airdrop.successDesc": "ستتلقى رموز VAITO عند توزيع الإسقاط الجوي.",
     "airdrop.invalidAddress": "يرجى إدخال عنوان Solana صالح",
+    "airdrop.endsOn": "ينتهي التسجيل في 23 أكتوبر 2024",
     
     // Special Price
     "specialPrice.title": "سعر خاص",
