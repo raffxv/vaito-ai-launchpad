@@ -146,31 +146,6 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Special Price Banner */}
-          <div className="p-3 sm:p-4 rounded-lg bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/40 max-w-md">
-            <div className="flex items-start gap-3">
-              <div className="p-2 bg-yellow-500/20 rounded-lg">
-                <Sparkles className="h-5 w-5 text-yellow-400" />
-              </div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <h3 className="text-sm sm:text-base font-bold text-yellow-400 uppercase tracking-wide">
-                    {t("specialPrice.title")}
-                  </h3>
-                  <span className="px-2 py-0.5 bg-yellow-500/30 rounded-full text-[10px] font-semibold text-yellow-300">
-                    5x {t("specialPrice.bonus")}
-                  </span>
-                </div>
-                <p className="text-xs sm:text-sm text-foreground mb-1">
-                  <span className="font-semibold">{t("specialPrice.dates")}</span>
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  {t("specialPrice.description")}
-                </p>
-              </div>
-            </div>
-          </div>
-
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Button 
               size="lg" 
