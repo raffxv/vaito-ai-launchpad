@@ -1,4 +1,8 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import binanceLogo from "@/assets/binance-logo.png";
+import coinmarketcapLogo from "@/assets/coinmarketcap-logo.png";
+import mexcLogo from "@/assets/mexc-logo.png";
+import raydiumLogo from "@/assets/raydium-logo.png";
 
 const ListingSection = () => {
   const { t } = useLanguage();
@@ -6,7 +10,7 @@ const ListingSection = () => {
   const exchanges = [
     {
       name: "Binance",
-      logo: "https://cryptologos.cc/logos/bnb-bnb-logo.png",
+      logo: binanceLogo,
     },
     {
       name: "CoinGecko",
@@ -14,11 +18,11 @@ const ListingSection = () => {
     },
     {
       name: "CoinMarketCap",
-      logo: "https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_logo.svg",
+      logo: coinmarketcapLogo,
     },
     {
       name: "MEXC",
-      logo: "https://www.mexc.com/static/images/common/logo.svg",
+      logo: mexcLogo,
     },
     {
       name: "Bitget",
@@ -26,7 +30,7 @@ const ListingSection = () => {
     },
     {
       name: "Raydium",
-      logo: "https://raydium.io/logo/logo-only-icon.svg",
+      logo: raydiumLogo,
     },
   ];
 
