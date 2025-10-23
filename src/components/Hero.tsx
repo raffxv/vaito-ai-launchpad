@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
-import { Copy, Check, Clock, Gift } from "lucide-react";
+import { Copy, Check, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import heroImage from "@/assets/hero-vaito.jpg";
 import vaitoLogo from "@/assets/vaito-logo.jpg";
@@ -10,10 +10,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Hero = () => {
   const [showPresale, setShowPresale] = useState(false);
-  const [showAirdrop, setShowAirdrop] = useState(false);
   const [copied, setCopied] = useState(false);
   const [solAmount, setSolAmount] = useState("");
-  const [solAddress, setSolAddress] = useState("");
   const { toast } = useToast();
   const { t } = useLanguage();
   const presaleAddress = "96Qj354e1ZnXe37gvx5zvK5Rb7MRtKcyJvNqfXUwyjt3";
@@ -29,8 +27,8 @@ export const Hero = () => {
 
   useEffect(() => {
     const endDate = new Date();
-    endDate.setDate(endDate.getDate() + 6);
-    endDate.setHours(endDate.getHours() + 11);
+    endDate.setDate(endDate.getDate() + 2);
+    endDate.setHours(endDate.getHours() + 6);
     
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -70,38 +68,6 @@ export const Hero = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const validateSolanaAddress = (address: string) => {
-    // Basic Solana address validation (32-44 characters, base58)
-    const solanaAddressRegex = /^[1-9A-HJ-NP-Za-km-z]{32,44}$/;
-    return solanaAddressRegex.test(address);
-  };
-
-  const handleAirdropSubmit = () => {
-    if (!solAddress.trim()) {
-      toast({
-        title: t("airdrop.invalidAddress"),
-        variant: "destructive",
-      });
-      return;
-    }
-
-    if (!validateSolanaAddress(solAddress.trim())) {
-      toast({
-        title: t("airdrop.invalidAddress"),
-        variant: "destructive",
-      });
-      return;
-    }
-
-    // Here you would typically send the address to your backend
-    toast({
-      title: t("airdrop.success"),
-      description: t("airdrop.successDesc"),
-    });
-    
-    setSolAddress("");
-    setShowAirdrop(false);
-  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
@@ -189,15 +155,6 @@ export const Hero = () => {
               className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-6 md:px-8 py-5 md:py-6 text-base md:text-lg neon-border transition-all hover:shadow-[0_0_30px_hsl(var(--neon-glow)/0.7)] w-full sm:w-auto"
             >
               {t("hero.buyNow")}
-            </Button>
-            <Button 
-              size="lg" 
-              onClick={() => setShowAirdrop(true)}
-              variant="outline"
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-6 md:px-8 py-5 md:py-6 text-base md:text-lg transition-all w-full sm:w-auto"
-            >
-              <Gift className="mr-2 h-5 w-5" />
-              {t("hero.joinAirdrop")}
             </Button>
           </div>
 
@@ -324,51 +281,6 @@ export const Hero = () => {
         </DialogContent>
       </Dialog>
 
-      {/* Airdrop Dialog */}
-      <Dialog open={showAirdrop} onOpenChange={setShowAirdrop}>
-        <DialogContent className="sm:max-w-md bg-background/95 backdrop-blur-xl border-primary/30">
-          <DialogHeader>
-            <DialogTitle className="text-xl md:text-2xl font-orbitron text-glow flex items-center gap-2">
-              <Gift className="h-6 w-6 text-primary" />
-              {t("airdrop.title")}
-            </DialogTitle>
-            <DialogDescription className="text-sm text-muted-foreground">
-              {t("airdrop.description")}
-            </DialogDescription>
-          </DialogHeader>
-          
-          <div className="space-y-4 py-4">
-            {/* End Date Notice */}
-            <div className="p-3 rounded-lg bg-primary/10 border border-primary/30">
-              <p className="text-xs sm:text-sm text-center text-foreground font-medium">
-                ⏰ {t("airdrop.endsOn")}
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <label className="text-sm font-semibold text-foreground">
-                {t("airdrop.addressLabel")}
-              </label>
-              <input
-                type="text"
-                placeholder={t("airdrop.addressPlaceholder")}
-                value={solAddress}
-                onChange={(e) => setSolAddress(e.target.value)}
-                className="w-full px-3 py-2 bg-background/50 border border-primary/30 rounded-md text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
-                maxLength={44}
-              />
-            </div>
-
-            <Button
-              onClick={handleAirdropSubmit}
-              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
-              size="lg"
-            >
-              {t("airdrop.submit")}
-            </Button>
-          </div>
-        </DialogContent>
-      </Dialog>
     </section>
   );
 };
