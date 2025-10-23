@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import LoadingScreen from "@/components/LoadingScreen";
 import PurchaseNotifications from "@/components/PurchaseNotifications";
 import MarqueeText from "@/components/MarqueeText";
+import ListingSection from "@/components/ListingSection";
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -46,6 +47,7 @@ const Index = () => {
       <Header onPresaleClick={handlePresaleClick} />
       <Hero />
       <MarqueeText />
+      <ListingSection />
       <About />
       <Tokenomics />
       <Roadmap />

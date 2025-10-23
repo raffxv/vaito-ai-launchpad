@@ -54,6 +54,9 @@ const translations = {
     "airdrop.invalidAddress": "Please enter a valid Solana address",
     "airdrop.endsOn": "Registration ends on October 23, 2024",
     
+    // Listing
+    "listing.title": "VAITO LISTING 28 OCT",
+    
     // Special Price
     "specialPrice.title": "Special Price",
     "specialPrice.bonus": "BONUS",
@@ -160,6 +163,9 @@ const translations = {
     "airdrop.successDesc": "Anda akan menerima token VAITO ketika airdrop didistribusikan.",
     "airdrop.invalidAddress": "Silakan masukkan alamat Solana yang valid",
     "airdrop.endsOn": "Pendaftaran berakhir pada 23 Oktober 2024",
+    
+    // Listing
+    "listing.title": "VAITO LISTING 28 OKT",
     
     // Special Price
     "specialPrice.title": "Harga Spesial",
@@ -268,6 +274,9 @@ const translations = {
     "airdrop.invalidAddress": "请输入有效的Solana地址",
     "airdrop.endsOn": "注册截止日期：2024年10月23日",
     
+    // Listing
+    "listing.title": "VAITO上市 10月28日",
+    
     // Special Price
     "specialPrice.title": "特价优惠",
     "specialPrice.bonus": "奖励",
@@ -374,6 +383,9 @@ const translations = {
     "airdrop.successDesc": "에어드랍 배포 시 VAITO 토큰을 받게 됩니다.",
     "airdrop.invalidAddress": "유효한 솔라나 주소를 입력하세요",
     "airdrop.endsOn": "등록 마감: 2024년 10월 23일",
+    
+    // Listing
+    "listing.title": "VAITO 상장 10월 28일",
     
     // Special Price
     "specialPrice.title": "특별 가격",
@@ -482,6 +494,9 @@ const translations = {
     "airdrop.invalidAddress": "Пожалуйста, введите действительный адрес Solana",
     "airdrop.endsOn": "Регистрация до 23 октября 2024 г.",
     
+    // Listing
+    "listing.title": "ЛИСТИНГ VAITO 28 ОКТ",
+    
     // Special Price
     "specialPrice.title": "Специальная цена",
     "specialPrice.bonus": "БОНУС",
@@ -588,6 +603,9 @@ const translations = {
     "airdrop.successDesc": "ستتلقى رموز VAITO عند توزيع الإسقاط الجوي.",
     "airdrop.invalidAddress": "يرجى إدخال عنوان Solana صالح",
     "airdrop.endsOn": "ينتهي التسجيل في 23 أكتوبر 2024",
+    
+    // Listing
+    "listing.title": "إدراج VAITO 28 أكتوبر",
     
     // Special Price
     "specialPrice.title": "سعر خاص",
