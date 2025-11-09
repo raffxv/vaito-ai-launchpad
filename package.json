@@ -11,6 +11,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+  "@solana/web3.js": "^1.95.0",
+  "@solana/wallet-adapter-base": "^0.9.26",
+  "@solana/wallet-adapter-react": "^0.18.9",
+  "@solana/wallet-adapter-react-ui": "^0.9.27",
+  "@solana/wallet-adapter-wallets": "^0.19.9",
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-alert-dialog": "^1.1.14",
