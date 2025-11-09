@@ -284,16 +284,14 @@ export const Hero = () => {
             </div>
           </div>
            {/* Connect Wallet */}
-            <div className="flex justify-center pt-4">
-              <WalletMultiButton className="!bg-primary !text-primary-foreground !font-semibold hover:!bg-primary/90 transition-all" />
-            </div>
-        </DialogContent>
-        <DialogContent>
-          <div className="flex justify-center pt-4">
-              <h4 classnName='font-bold text-xl py-6'>Or connect a wallet</h4>
-            <WalletMultiButton className="!bg-primary !text-primary-foreground !font-semibold hover:!bg-primary/90 transition-all" />
+           
+          <div className="flex justify-center pt-4 mt-6">
+              <h4 classnName='font-bold text-xl py-6'>Or connect with wallet</h4>
+            <WalletMultiButton style={{background:'#6d1b7d', borderRadius:'4px'}} />>
+              Connect wallet
           </div>
         </DialogContent>
+          
       </Dialog>
 
     </section>
