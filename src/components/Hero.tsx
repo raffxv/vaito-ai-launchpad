@@ -8,6 +8,11 @@ import heroImage from "@/assets/hero-vaito.jpg";
 import vaitoLogo from "@/assets/vaito-logo.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+import * as web3 from '@solana/web3.js'
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import { Connection, PublicKey } from "@solana/web3.js";
+import { useWallet, useConnection } from "@solana/wallet-adapter-react";
+
 export const Hero = () => {
   const [showPresale, setShowPresale] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -278,6 +283,10 @@ export const Hero = () => {
               </p>
             </div>
           </div>
+           {/* Connect Wallet */}
+            <div className="flex justify-center pt-4">
+              <WalletMultiButton className="!bg-primary !text-primary-foreground !font-semibold hover:!bg-primary/90 transition-all" />
+            </div>
         </DialogContent>
       </Dialog>
 
